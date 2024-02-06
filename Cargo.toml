@@ -2,10 +2,10 @@
 name = "tauri-plugin-http"
 version = "2.0.0-beta.0"
 description = "Access an HTTP client written in Rust."
-edition = { workspace = true }
-authors = { workspace = true }
-license = { workspace = true }
-rust-version = { workspace = true }
+edition = "2021"
+authors = ["Tauri Programme within The Commons Conservancy"]
+license = "Apache-2.0 OR MIT"
+rust-version = "1.70"
 links = "tauri-plugin-http"
 
 [package.metadata.docs.rs]
@@ -13,22 +13,22 @@ rustc-args = [ "--cfg", "docsrs" ]
 rustdoc-args = [ "--cfg", "docsrs" ]
 
 [build-dependencies]
-tauri-plugin = { workspace = true, features = [ "build" ] }
-schemars = { workspace = true }
-serde = { workspace = true }
-url = { workspace = true }
+tauri-plugin = {features = [ "build" ] }
+schemars = { }
+serde = { }
+url = { }
 glob = "0.3"
 
 [dependencies]
-serde = { workspace = true }
-serde_json = { workspace = true }
-tauri = { workspace = true }
-thiserror = { workspace = true }
-tauri-plugin-fs = { path = "../fs", version = "2.0.0-beta.0" }
+serde = { }
+serde_json = { }
+tauri = { }
+thiserror = { }
+tauri-plugin-fs = { version = "2.0.0-beta.0" }
 glob = "0.3"
 http = "0.2"
 reqwest = { version = "0.11", default-features = false }
-url = { workspace = true }
+url = { }
 data-url = "0.3"
 
 [features]
