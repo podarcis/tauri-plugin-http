@@ -174,6 +174,8 @@ pub async fn fetch<R: Runtime>(
             {
                 let mut builder = reqwest::ClientBuilder::new();
 
+                builder = builder.danger_accept_invalid_certs(cfg!(feature = "accept-invalid-certs"));
+
                 if let Some(timeout) = connect_timeout {
                     builder = builder.connect_timeout(Duration::from_millis(timeout));
                 }
